@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="form-edit">
+    <div class="row">
+
+        <h3 href="{{ url_for('news_page', page_id=news.id) }}">{{news.date_submit.strftime('%d-%m-%Y %H:%M')}}</h3>
+        <h3>{{news.title}}</h3>
+        <p>{{news.summary}}</p><br><br>
+
+        <a href="{{ url_for('upload_news', page_id=news.id) }}">Download PDF</a>
+
+    </div>
+</section>
+{% endblock %}

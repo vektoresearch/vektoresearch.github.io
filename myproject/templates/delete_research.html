@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="form-edit">
+    <div class="row">  
+        <form method="post">
+            {{form.hidden_tag()}}
+            {{form.id.label}} <br> {{form.id}}<br><br>
+            {{form.submit()}}
+        </form>
+        <br><a href="{{ url_for('new_content_research') }}">Write New Research Content</a>
+        <br><a href="{{ url_for('update_research') }}">Update Research Content</a>
+    </div>
+</section>
+
+{% endblock %}

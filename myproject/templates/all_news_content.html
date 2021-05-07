@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="form-edit">
+    <div class="row">
+
+        <ul>
+            {% for item in news %}
+            <li><a href="{{ url_for('news_page', page_id=item.id) }}">{{item.title}}</a></li>
+            {{item.firstpagetext}}
+            {% endfor %}
+        </ul>
+
+        <ul><br><br>
+        {%if listing.page == 1 %}
+        <a href="#">Previous</a>
+        {% else %}
+        <a href="/news/allnews/{{listing.page-1}}">Previous</a>
+        {% endif %}
+        <a href="{{listing}}">Next</a>
+        </ul>
+
+    </div>
+</section>
+{% endblock %}

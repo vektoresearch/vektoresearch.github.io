@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="form-edit">
+    <div class = "row">
+        <div class="alert">
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            {% for message in messages %}
+                <strong>{{ message }}
+              
+            {% endfor %}
+            </ul>
+            {% endif %}
+            {% endwith %}
+        </div>
+        <br>
+        <p>Your email has not yet confirmed! Please check your email.</p>
+        <br><br>
+        <p>Not yet received? <a href="{{ url_for('resend_confirmation') }}">Click here!</a></p>
+    </div>
+</section>
+{% endblock %}

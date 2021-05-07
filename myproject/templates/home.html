@@ -1,0 +1,168 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="one-provider">
+    <div class="row">
+<h1>One-stop Research Provider<br>Tailoring your needs</h1>
+    <a class="btn js--go-to-research" href=#><strong>Let's get started</strong></a>
+</div>
+</section>
+
+<section class="section-services">
+<div class="row">
+    <h2>Our Services</h2>
+    <p class="long-copy-edit-service">
+        Are you looking for in-depth research of a company? Are you in need of corporate advisory? Or perhaps just a sip of fresh insight to kick-start your day? You have come to the right place! We will serve all our clients, no big or small clients, to our utmost practice.
+    </p>
+</div>
+
+<div class="row">
+    <div class="col span-1-of-3 box">
+    <i class="ion-stats-bars icon-big"></i>
+    <h3 class="service-h3">Research Service</h3>
+    <p class="long-copy">
+        We are offering wide range of research. In addition, if you are interested in on-demand research, just tell us what you need! For now, we only offer research for publicly-listed companies.
+    </p>
+</div>
+    
+    <div class="col span-1-of-3 box">
+    <i class="ion-compass icon-big"></i>
+    <h3 class="service-h3">Corporate Advisory</h3>
+    <p class="long-copy">
+        Need our recommendation? We can help you make financial analysis for your company. This service is currently unavailable.
+    </div>
+    
+    <div class="col span-1-of-3 box">
+    <i class="ion-monitor icon-big"></i>
+    <h3 class="service-h3">Daily Insights</h3>
+    <p class="long-copy">
+        We plan to provide you with fresh insights everyday! Starting from podcasts from industry experts, companies, and analysts to short video about our recent groundchecks. This service is currently unavailable. 
+    </div>
+    
+</div>
+</section>
+
+<section class="research-section js--research-section">
+<div class="row">
+    <h2><a href="/research/allresearch/1">Exclusive from Our Research Team</a></h2>
+</div>
+
+<div class="row">
+<div class="col span-1-of-4 box">
+    <img src="data:;base64,{{image_research_1}}" alt="research1">
+    <h3><a href="{{ url_for('research_page', page_id=content[-1].id) }}">{{content[-1].title}}</a></h3>
+    <p>{{content[-1].firstpagetext}}</p>
+</div>
+
+<div class="col span-1-of-4 box">
+    <img src="data:;base64,{{image_research_2}}" alt="research2">
+    <h3><a href="{{ url_for('research_page', page_id=content[-2].id) }}">{{content[-2].title}}</a></h3>
+    <p>{{content[-2].firstpagetext}}</p>
+</div>
+
+<div class="col span-1-of-4 box">
+    <img src="data:;base64,{{image_research_3}}" alt="research3">
+    <h3><a href="{{ url_for('research_page', page_id=content[-3].id) }}">{{content[-3].title}}</a></h3>
+    <p>{{content[-3].firstpagetext}}</p>
+</div>
+
+<div class="col span-1-of-4 box">
+    <img src="data:;base64,{{image_research_4}}" alt="research4">
+    <h3><a href="{{ url_for('research_page', page_id=content[-4].id) }}">{{content[-4].title}}</a></h3>
+    <p>{{content[-4].firstpagetext}}</p>
+</div>
+</div>
+</section>
+    
+
+<section class="insight-section">
+<div class="row">
+    <h2><a href="/news/allnews/1">A Cup of Coffee to Start Your Day</a></h2>
+</div>
+
+<div class="row">
+<div class="col span-1-of-4 box">
+    <img src="data:;base64,{{image_news_1}}" alt="dailynews1">
+    <h3><a href="{{ url_for('news_page', page_id=news[-1].id) }}">{{news[-1].title}}</a></h3>
+    <p>{{news[-1].firstpagetext}}</p>
+</div>
+
+<div class="col span-1-of-4 box">
+    <img src="data:;base64,{{image_news_2}}" alt="dailynews2">
+    <h3><a href="{{ url_for('news_page', page_id=news[-2].id) }}">{{news[-2].title}}</a></h3>
+    <p>{{news[-2].firstpagetext}}</p>
+</div>
+
+<div class="col span-1-of-4 box">
+    <img src="data:;base64,{{image_news_3}}" alt="dailynews3">
+    <h3><a href="{{ url_for('news_page', page_id=news[-3].id) }}">{{news[-3].title}}</a></h3>
+    <p>{{news[-3].firstpagetext}}</p>
+</div>
+
+<div class="col span-1-of-4 box">
+    <img src="data:;base64,{{image_news_4}}" alt="dailynews4">
+    <h3><a href="{{ url_for('news_page', page_id=news[-4].id) }}">{{news[-4].title}}</a></h3>
+    <p>{{news[-4].firstpagetext}}</p>
+</div>
+</div>
+</section>       
+
+<section class="listen-section">
+<div class="row">
+    <h2>Listen from the Experts</h2>
+</div>
+
+<div class="row">
+<div class="col span-1-of-3 box">
+    <img src="data:;base64,{{image_youtube_1}}" alt="interview1">
+    <h3><a href="{{youtube[-1].link}}">{{youtube[-1].title}}</a></h3>
+    <p>{{youtube[-1].firstpagetext}}</p>
+</div>
+
+<div class="col span-1-of-3 box">
+    <img src="data:;base64,{{image_youtube_2}}" alt="interview2">
+    <h3><a href="{{youtube[-2].link}}">{{youtube[-2].title}}</a></h3>
+    <p>{{youtube[-2].firstpagetext}}</p>
+</div>
+
+<div class="col span-1-of-3 box">
+    <img src="data:;base64,{{image_youtube_3}}" alt="interview3">
+    <h3><a href="{{youtube[-3].link}}">{{youtube[-3].title}}</a></h3>
+    <p>{{youtube[-3].firstpagetext}}</p>
+</div>
+</div>
+</section>  
+
+<section class="meet-us">
+<div class="row">
+    <h2>Within Your Grasp</h2>
+</div>
+
+<div class="row">
+<div class="col span-1-of-2 step-box">
+    <img src="static/Image/Apple-iPhone-XR.png" alt="iPhone" class="app-screen">
+</div>
+
+<div class="col span-1-of-2 step-box">
+<div class="work-steps">
+        <div>1</div>
+        <p>Open your App or Google Play</p>
+</div>                
+    
+<div class="work-steps">
+        <div>2</div>
+        <p>Install the Vektor Research apps</p>
+</div>                
+    
+<div class="work-steps">
+        <div>3</div>
+        <p>Visualize the research</p>
+</div>
+<a href="#" class="btn-app"><img src="static/Image/download-app.svg" alt="App store botton"></a>
+<a href="#" class="btn-app"><img src="static/Image/download-app-android.png" alt="Playstore store botton"></a>
+    
+</div>
+</div>
+</section>
+
+{% endblock %}

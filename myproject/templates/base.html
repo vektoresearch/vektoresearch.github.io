@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/normalize.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/grid.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/ionicons.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/website-queries.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/website-style.css')}}">
+  
+    
+    <title>Vektor Research</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="static\favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="static\favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="static\favicons/favicon-16x16.png">
+    <link rel="manifest" href="static\favicons/site.webmanifest">
+    <link rel="mask-icon" href="static\favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="static\favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="static\favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+  </head>
+
+  <body>
+    <header>
+      <nav>
+          <div class="row">
+              <img src="{{ url_for('static', filename='Image/Vektor_Research_Logo.png') }}" alt="Vektor Logo"
+                   class="logo">
+              <ul class="main-nav">
+                  {% if current_user.is_authenticated %}
+                  <li> <a href="{{ url_for('home') }}">Home</a></li>
+                  <li> <a href="{{ url_for('about_us') }}">About Us</a></li>
+                  <li> <a href="{{ url_for('subscription') }}">Subscription</a></li>
+                  <li> <a href="{{ url_for('logout') }}">Logout</a></li>
+                  {% else %} 
+                  <li> <a href="{{ url_for('login') }}">Login</a></li> 
+                  <li> <a href="{{ url_for('register') }}">Register</a></li>
+                  
+                  {% endif %} 
+              </ul>
+          </div>
+      </nav>
+  </header>
+
+{% block content %}
+
+{% endblock %}
+
+<footer>
+  <div class="row">
+  <div class="col span-1-of-2">
+      <ul class="footer-nav">
+          <li><a href="{{ url_for('policy') }}">Policy</a></li>
+          <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+          <li><a href="#">iOS App</a></li>
+          <li><a href="#">Android App</a></li>
+      </ul>
+  </div>
+      
+  <div class="col span-1-of-2">
+      <ul class="social-links">
+          <li><a href="#"><i class="ion-social-twitter"></i></a></li>
+          <li><a href="#"><i class="ion-social-youtube"></i></a></li>
+          <li><a href="#"><i class="fab fa-spotify"></i></a></li>
+          <li><a href="#"><i class="ion-social-instagram"></i></a></li>
+      </ul>
+      
+  </div>
+  </div>
+
+  <div class="row">
+  <p>
+      Copyright &copy; 2021 Vektor Research. Indonesia.
+  </p>
+  </div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+<script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="//cdn.jsdelivr.net/selectivizr/1.0.3b/selectivizr.min.js"></script>
+<script src="static/js/jquery.waypoints.min.js"></script>
+<script src="static/js/Website-script.js"></script>
+
+  </body>
+</html>

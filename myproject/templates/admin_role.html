@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="form-edit">
+    <div class="row">
+        <div class="alert">
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            {% for message in messages %}
+                <strong>{{ message }}
+              
+            {% endfor %}
+            </ul>
+            {% endif %}
+            {% endwith %}
+        </div>
+        <br>  
+        <form method="post">
+            {{form.hidden_tag()}}
+            {{form.id.label}} <br> {{form.id}}<br><br>
+            {{form.name.label}} <br> {{form.name}}<br><br>
+            {{form.submit()}}
+        </form>
+    </div>
+</section>
+
+{% endblock %}

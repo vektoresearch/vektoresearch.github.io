@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="form-edit">
+    <div class="row">  
+        <form method="post" enctype="multipart/form-data">
+            {{form.hidden_tag()}}
+            {{form.title.label}} <br> {{form.title(cols="70")}}<br><br>
+            {{form.firstpagetext.label}} <br> {{form.firstpagetext(cols="70",rows="5")}}<br><br>
+            {{form.summary.label}} <br> {{form.summary(cols="70",rows="20")}}<br><br>
+            {{form.pdffile.label}} <br> {{form.pdffile()}}<br><br>
+            {{form.imgfile.label}} <br> {{form.imgfile()}}<br><br>
+            {{form.submit()}}
+
+        </form>
+
+    <br><a href="{{ url_for('update_news') }}">Update News Content</a>
+    <br><a href="{{ url_for('delete_news') }}">Delete News Content</a>
+
+    </div>
+</section>
+
+{% endblock %}

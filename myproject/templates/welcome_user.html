@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="form-edit">
+    <div class = "row">
+        <div style="color:red">
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            {% for message in messages %}  
+                <strong>{{ message }}
+            
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
+        </div>
+        <br>
+        <h3>Congrats! You are logged in!</h3> <br><p>Please click Home button on the top right.</p>
+    </div>
+</section>
+{% endblock %}

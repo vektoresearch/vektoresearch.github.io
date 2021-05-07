@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="form-edit">
+    <div class="row">  
+        <form method="post">
+            {{form.hidden_tag()}}
+            {{form.id.label}} <br> {{form.id}}<br><br>
+            {{form.submit()}}
+        </form>
+    </div>
+</section>
+
+{% endblock %}
