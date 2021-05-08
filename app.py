@@ -64,12 +64,10 @@ def subscription():
     return render_template('subscription.html')
 
 @app.route('/policy')
-@login_required
 def policy():
     return render_template('policy.html')
 
 @app.route('/contact')
-@login_required
 def contact():
     return render_template('contact.html')
 
