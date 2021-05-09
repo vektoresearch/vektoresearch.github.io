@@ -8,7 +8,6 @@ from datetime import datetime
 class Content(db.Model):
 
     __tablename__ = 'contents'
-    __bind_key__ = 'contents'
 
     id = db.Column(db.Integer,primary_key=True)
     title = db.Column(db.String(50),index=True)
@@ -29,7 +28,6 @@ class Content(db.Model):
 class News(db.Model):
 
     __tablename__ = 'news'
-    __bind_key__ = 'news'
 
     id = db.Column(db.Integer,primary_key=True)
     title = db.Column(db.String(50),index=True)
@@ -50,7 +48,6 @@ class News(db.Model):
 class Youtube(db.Model):
 
     __tablename__ = 'youtube'
-    __bind_key__ = 'youtube'
 
     id = db.Column(db.Integer,primary_key=True)
     title = db.Column(db.String(50),index=True)
