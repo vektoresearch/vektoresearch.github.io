@@ -7,7 +7,7 @@
 html,
 body {
     background-color: #fff;
-    color: #555;
+    color: black;
     font-family: 'Arial Narrow';
     font-stretch: condensed;
     font-size: 20px;
@@ -172,7 +172,7 @@ header {
 /* ------------------------------------------ */
 
 .one-provider {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)),url(../Image/krakenimage.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)),url(../Image/stockresearch.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -493,8 +493,10 @@ footer p {
 /* ------------------------------------------ */
 
 .form-edit {
+    color:rgba(0, 0, 0, 0.8);
     padding-top: 50px;
     padding-bottom: 50px;
+    padding-right: 100px;
 }
 
 .form-edit input {

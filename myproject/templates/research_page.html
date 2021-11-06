@@ -6,7 +6,7 @@
 
         <p href="{{ url_for('research_page', page_id=content.id) }}">{{content.date_submit.strftime('%d-%m-%Y %H:%M')}}</p><br>
         <h3>{{content.title}}</h3>
-        <p>{{content.summary}}</p><br><br>
+        <p style="color:black">{{content.summary|safe}}</p><br><br>
 
         <a href="{{ url_for('upload_research', page_id=content.id) }}">Download PDF</a>
 

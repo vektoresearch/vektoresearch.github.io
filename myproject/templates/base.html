@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +10,10 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/ionicons.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/website-queries.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/website-style.css')}}">
-  
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
     
     <title>Vektor Research</title>
 
@@ -65,10 +68,10 @@
       
   <div class="col span-1-of-2">
       <ul class="social-links">
-          <li><a href="#"><i class="ion-social-twitter"></i></a></li>
-          <li><a href="#"><i class="ion-social-youtube"></i></a></li>
+          <li><a href="https://twitter.com/vektoresearch"><i class="ion-social-twitter"></i></a></li>
+          <li><a href="https://www.youtube.com/channel/UC9g04znBcpqs6437ptCFTZg"><i class="ion-social-youtube"></i></a></li>
           <li><a href="#"><i class="fab fa-spotify"></i></a></li>
-          <li><a href="#"><i class="ion-social-instagram"></i></a></li>
+          <li><a href="https://www.instagram.com/vektoresearch/"><i class="ion-social-instagram"></i></a></li>
       </ul>
       
   </div>
@@ -80,6 +83,25 @@
   </p>
   </div>
 </footer>
+
+<script>$('#summernote').summernote({
+  placeholder: 'Write here...',
+  lineHeights: ['0.1', '0.5', '0.8', '1.0', '1.5'],
+  tabsize: 2,
+  height: 120,
+  toolbar: [
+    ['style', ['style']],
+    ['font', ['bold', 'italic', 'underline', 'clear']],
+    ['fontsize', ['fontsize']],
+    ['color', ['color']],
+    ['para', ['ul', 'ol', 'paragraph']],
+    ['height', ['height']],
+    ['table', ['table']],
+    ['insert', ['link', 'picture', 'video']],
+    ['view', ['fullscreen', 'codeview', 'help']]
+  ]
+});
+</script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
