@@ -29,6 +29,7 @@ body {
     padding: 1%;
 }
 
+
 /* ------------------------------------------ */
 /* HEADING */
 /* ------------------------------------------ */
@@ -280,6 +281,24 @@ header {
 }
 
 /* ------------------------------------------ */
+/*  FORM */
+/* ------------------------------------------ */
+
+.form-edit {
+    color:rgba(0, 0, 0, 0.8);
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.form-edit input {
+    font-size: 14px;
+}
+
+.display p {
+    padding-right: 45%;
+}
+
+/* ------------------------------------------ */
 /* INTERVIEW AND PODCAST SECTION */
 /* ------------------------------------------ */
 
@@ -486,19 +505,4 @@ footer p {
 .attachment {
     margin-top: -10px;
     margin-bottom: 30px;
-}
-
-/* ------------------------------------------ */
-/*  FORM */
-/* ------------------------------------------ */
-
-.form-edit {
-    color:rgba(0, 0, 0, 0.8);
-    padding-top: 50px;
-    padding-bottom: 50px;
-    padding-right: 50px;
-}
-
-.form-edit input {
-    font-size: 14px;
 }
