@@ -5,7 +5,7 @@
     <div class="row">
         <div class="display">
 
-        <h3 href="{{ url_for('news_page', page_id=news.id) }}">{{news.date_submit.strftime('%d-%m-%Y %H:%M')}}</h3>
+        <p href="{{ url_for('news_page', page_id=news.id) }}">{{news.date_submit.strftime('%d-%m-%Y %H:%M')}}</p>
         <h3>{{news.title}}</h3>
         <p style="color:black">{{news.summary|safe}}</p><br><br>
 
