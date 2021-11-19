@@ -19,11 +19,6 @@
     width: 70%;
 }
 
-    .icon-big {
-    font-size: 350%;
-    margin-left: 150px;
-    }
-
     .step-box {
         margin-top: 10px;
     }
@@ -66,7 +61,8 @@
         padding: 30px 0;
     }
     
-    .row {padding: 0 4%;
+    .row {
+        padding: 0 4%;
     }
     
     .col {
@@ -90,7 +86,10 @@
     
     .long-copy {
         width: 100%;
-        margin-left:0%;
+    }
+
+    .long-copy-edit-service {
+        margin-left: 5px;
     }
     
     .works-step {
@@ -115,6 +114,11 @@
     
     .app-screen {
         width: 40%;
+    }
+
+    .display {
+        padding-left: 20%;
+        padding-right: 50%;
     }
     
 }
