@@ -173,7 +173,7 @@ header {
 /* ------------------------------------------ */
 
 .one-provider {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)),url(../Image/stockresearch.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8));
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -294,7 +294,7 @@ header {
     font-size: 14px;
 }
 
-.display p {
+.display {
     padding-right: 45%;
 }
 
