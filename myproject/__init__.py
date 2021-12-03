@@ -1,4 +1,5 @@
 import os
+import psycopg2
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
@@ -11,7 +12,7 @@ app = Flask(__name__)
 
 # User Database
 app.config['SECRET_KEY'] = 'jue878215fd84;wndjhd3829e82!@@#%!^!&'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://ijonhaklugslva:28854a71f68fb7b90ad53f5eef3914d684fe100a6b6335e4996a4c49db514272@ec2-3-234-85-177.compute-1.amazonaws.com:5432/ded36j5kdcnac3'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
