@@ -10,9 +10,9 @@ class Content(db.Model):
     __tablename__ = 'contents'
 
     id = db.Column(db.Integer,primary_key=True)
-    title = db.Column(db.String(50),index=True)
-    firstpagetext = db.Column(db.String(50),index=True)
-    summary = db.Column(db.String(1000),index=True)
+    title = db.Column(db.String(250),index=True)
+    firstpagetext = db.Column(db.Text,index=True)
+    summary = db.Column(db.Text,index=True)
     date_submit = db.Column(db.DateTime,nullable=False)
     pdffile = db.Column(db.LargeBinary)
     imgfile = db.Column(db.LargeBinary)
@@ -30,9 +30,9 @@ class News(db.Model):
     __tablename__ = 'news'
 
     id = db.Column(db.Integer,primary_key=True)
-    title = db.Column(db.String(50),index=True)
-    firstpagetext = db.Column(db.String(50),index=True)
-    summary = db.Column(db.String(1000),index=True)
+    title = db.Column(db.String(250),index=True)
+    firstpagetext = db.Column(db.Text,index=True)
+    summary = db.Column(db.Text,index=True)
     date_submit = db.Column(db.DateTime,nullable=False)
     pdffile = db.Column(db.LargeBinary)
     imgfile = db.Column(db.LargeBinary)
@@ -50,8 +50,8 @@ class Youtube(db.Model):
     __tablename__ = 'youtube'
 
     id = db.Column(db.Integer,primary_key=True)
-    title = db.Column(db.String(50),index=True)
-    firstpagetext = db.Column(db.String(50),index=True)
+    title = db.Column(db.String(250),index=True)
+    firstpagetext = db.Column(db.Text,index=True)
     imgfile = db.Column(db.LargeBinary)
     link = db.Column(db.String(1000),index=True)
 
