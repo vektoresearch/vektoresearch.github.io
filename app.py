@@ -117,7 +117,7 @@ def register():
         db.session.commit()
 
         send_mail_confirmation(user)
-        flash('Thanks for registering!')
+        flash('Thanks for registering! Please check your email!')
         return redirect(url_for('login'))
     return render_template('register.html',form=form)
 
