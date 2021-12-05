@@ -248,7 +248,7 @@ def delete_user_database():
         db.session.commit()
         flash('User has been deleted!','success')
         return redirect(url_for('delete_role_database'))
-    return render_template('user_database.html',form=form)
+    return render_template('delete_user_database.html',form=form)
 
 @app.route('/admin/delete/role-database',methods=['GET','POST'])
 @login_required
