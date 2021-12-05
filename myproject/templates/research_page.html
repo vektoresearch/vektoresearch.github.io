@@ -5,7 +5,7 @@
     <div class="row">
         <div class="display">
 
-        <p href="{{ url_for('research_page', page_id=content.id) }}">{{content.date_submit.strftime('%d-%m-%Y %H:%M')}} (GMT+7)</p><br>
+        <p href="{{ url_for('research_page', page_id=content.id) }}">{{content.date_submit.strftime('%d-%m-%Y %H:%M')}} (GMT+0)</p><br>
         <h3>{{content.title}}</h3>
         <p style= "color: black">{{content.summary | safe}}</p><br><br>
 
