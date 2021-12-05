@@ -12,7 +12,7 @@ class Content(db.Model):
     id = db.Column(db.Integer,primary_key=True)
     title = db.Column(db.String(250),index=True)
     firstpagetext = db.Column(db.Text,index=True)
-    summary = db.Column(db.Text,index=True)
+    summary = db.Column(db.Text)
     date_submit = db.Column(db.DateTime,nullable=False)
     pdffile = db.Column(db.LargeBinary)
     imgfile = db.Column(db.LargeBinary)
@@ -32,7 +32,7 @@ class News(db.Model):
     id = db.Column(db.Integer,primary_key=True)
     title = db.Column(db.String(250),index=True)
     firstpagetext = db.Column(db.Text,index=True)
-    summary = db.Column(db.Text,index=True)
+    summary = db.Column(db.Text)
     date_submit = db.Column(db.DateTime,nullable=False)
     pdffile = db.Column(db.LargeBinary)
     imgfile = db.Column(db.LargeBinary)
@@ -94,7 +94,7 @@ class User(db.Model,UserMixin):
     __tablename__ = 'users'
 
     id = db.Column(db.Integer,primary_key=True)
-    email = db.Column(db.String(64),unique=True,index=True)
+    email = db.Column(db.String(128),unique=True,index=True)
     username = db.Column(db.String(64),unique=True,index=True)
     password_hash = db.Column(db.String(128))
     confirmed = db.Column(db.Boolean, nullable=False, default=False)
