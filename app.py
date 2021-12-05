@@ -222,6 +222,7 @@ def content_management():
 
 @app.route('/admin/admin-role',methods=['GET','POST'])
 @login_required
+@roles_required('Admin')
 def update_admin_role():
 
     form = AdminForm()
