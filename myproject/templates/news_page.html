@@ -7,7 +7,7 @@
 
         <p href="{{ url_for('news_page', page_id=news.id) }}">{{news.date_submit.strftime('%d-%m-%Y %H:%M')}} (GMT+0)</p><br>
         <h3>{{news.title}}</h3>
-        <p style="color:black">{{news.summary|safe}}</p><br><br>
+        <p style="color:black">{{news.summary|safe}}</p><br>
 
         <a href="{{ url_for('upload_news', page_id=news.id) }}">Download PDF</a>
     </div>
